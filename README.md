@@ -31,7 +31,7 @@ Put this at the end of the form where you want the reCAPTCHA widget to appear.
 $recaptcha->widget();
 ```
 
-You can optionally add different parameters to the 'widget' method.  Shown below. 
+You can optionally add different parameters to the 'widget' method.  _Shown below._ 
 
 ```php
 /**
