@@ -9,7 +9,7 @@ Get your SITE & SERVER KEY here: https://www.google.com/recaptcha/
 ### Server-side
 ```php
 require('class.recaptcha.php');
-$recaptcha = new recaptcha('your_SECRET_Key_From_Recaptcha');		
+$recaptcha = new recaptcha('your_SITE_KEY', 'your_SECRET_KEY');		
 if(!$recaptcha->response()):
 	print 'Sorry, you failed the reCAPTCHA';
 else:
@@ -19,14 +19,14 @@ endif;
 
 ### Client-side
 
-Paste this snippet before the closing </head> tag.
+If possible, paste this snippet before the closing `</head>` tag.
 
-```html
-<script src="https://www.google.com/recaptcha/api.js"></script>
+```php
+$recaptcha->script();
 ```
 
-Paste this snippet at the end of the form where you want the reCAPTCHA widget to appear.
+Put this at the end of the form where you want the reCAPTCHA widget to appear.
 
-```html
-<div class="g-recaptcha" data-sitekey="your_SITE_key"></div>
+```php
+$recaptcha->widget();
 ```
