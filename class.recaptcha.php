@@ -20,21 +20,6 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-	/**
-	 *
-	 *	EXAMPLE USAGE:
-	 *
-	 *	// Get your secret key here: https://www.google.com/recaptcha/
-	 *
-	 *	require('class.recaptcha.php');
-	 *	$recaptcha = new recaptcha('your_Secret_Key_From_Recaptcha');		
-	 *	if(!$recaptcha->response()):
-	 *		print 'Sorry, you failed the reCAPTCHA';
-	 *	else:
-	 *		// All your form processing here.
-	 *	endif;
-	 *
-	 */
 
 	class recaptcha{
 		
