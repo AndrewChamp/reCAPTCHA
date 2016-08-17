@@ -71,11 +71,11 @@
 		
 		
 		/**
-		 *	@param	string	$theme	'light || dark'
-		 *	@param	string	$size	'normal || compact'
+		 *	@param	string	$theme	'light' || 'dark'
+		 *	@param	string	$size	'normal' (wide) || 'compact' (square)
 		 */
 		public function widget($theme='light', $size='normal'){
-			print '<div class="g-recaptcha" data-sitekey="'.$this->siteKey.'" data-theme="'.$theme.'"></div>';
+			print '<div class="g-recaptcha" data-sitekey="'.$this->siteKey.'" data-theme="'.$theme.'" data-size="'.$size.'"></div>';
 		}
 		
 	}
