@@ -11,8 +11,8 @@ Simple PHP class for reCAPTCHA verification.  Can be used to easily work into an
 require('class.recaptcha.php');
 $recaptcha = new recaptcha('your_Secret_Key_From_Recaptcha');		
 if(!$recaptcha->response()):
-  print 'Sorry, you failed the reCAPTCHA';
-  else:
+	print 'Sorry, you failed the reCAPTCHA';
+else:
 	// All your form processing here.
 endif;
 ```
