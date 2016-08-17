@@ -34,11 +34,7 @@ $recaptcha->widget();
 You can optionally add different parameters to the 'widget' method.  _Shown below._ 
 
 ```php
-/**
-*	@param	string	$theme	'light' || 'dark'
-*	@param	string	$size	'normal' (wide) || 'compact' (square)
- */
 $recaptcha->widget('dark', 'compact');
-// $theme = 'light' is default
-// $size = 'normal' is default
+// 1st param - 'light' is default (light|dark)
+// 2nd param - 'normal' is default (normal|compact)
 ```
