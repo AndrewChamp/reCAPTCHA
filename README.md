@@ -18,13 +18,15 @@ endif;
 ```
 
 ### Client-side
-#### File
+
 Paste this snippet before the closing </head> tag.
+
 ```html
 <script src="https://www.google.com/recaptcha/api.js"></script>
 ```
-#### Your Form
+
 Paste this snippet at the end of the form where you want the reCAPTCHA widget to appear.
+
 ```html
 <div class="g-recaptcha" data-sitekey="your_SITE_key"></div>
 ```
