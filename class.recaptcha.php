@@ -23,22 +23,29 @@
 
 	class recaptcha{
 		
-		private $secret;
+		private $secretKey;
+		private $siteKey;
 		
-		public function __construct($_secret=false){
-			if(!$_secret)
+		
+		public function __construct($_siteKey=false, $_secretKey=false){
+			if(!$_siteKey)
+				throw new Exception(__CLASS__.': Missing site key.');
+			if(!$_secretKey)
 				throw new Exception(__CLASS__.': Missing secret key.');
-			$this->secret = $_secret;
+			$this->secretKey = $_secretKey;
+			$this->siteKey = $_siteKey;
 		}
+		
 		
 		private function fields(){
 			$data = array(
-				'secret' => $this->secret,
+				'secret' => $this->secretKey,
 				'response' => $_POST["g-recaptcha-response"],
 				'remoteip' => $_SERVER['REMOTE_ADDR']
 			);
 			return $data;
 		}
+		
 		
 		private function send(){
 			$verify = curl_init();
@@ -52,9 +59,21 @@
 			return $captcha->success;
 		}
 		
+		
 		public function response(){
 			return $this->send();
 		}
+		
+		
+		public function script(){
+			print '<script src="https://www.google.com/recaptcha/api.js"></script>';
+		}
+		
+		
+		public function widget(){
+			print '<div class="g-recaptcha" data-sitekey="'.$this->siteKey.'"></div>';
+		}
+		
 	}
 
 ?>
