@@ -2,12 +2,12 @@
 
 Simple PHP class for reCAPTCHA verification.  Can be used to easily work into any framework, or by itself.
 
+Get your SITE & SERVER KEY here: https://www.google.com/recaptcha/
+
 ## Setup / How To Use
 
 ### Server-side
 ```php
-// Get your secret key here: https://www.google.com/recaptcha/
-
 require('class.recaptcha.php');
 $recaptcha = new recaptcha('your_SECRET_Key_From_Recaptcha');		
 if(!$recaptcha->response()):
