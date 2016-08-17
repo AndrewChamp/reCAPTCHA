@@ -70,8 +70,12 @@
 		}
 		
 		
-		public function widget(){
-			print '<div class="g-recaptcha" data-sitekey="'.$this->siteKey.'"></div>';
+		/**
+		 *	@param	string	$theme	'light || dark'
+		 *	@param	string	$size	'normal || compact'
+		 */
+		public function widget($theme='light', $size='normal'){
+			print '<div class="g-recaptcha" data-sitekey="'.$this->siteKey.'" data-theme="'.$theme.'"></div>';
 		}
 		
 	}
